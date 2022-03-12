@@ -50,6 +50,10 @@
         </init-param>
 
     </servlet>
+    <servlet>
+        <servlet-name>LoginServlet</servlet-name>
+        <servlet-class>com.zhangchun.week5.demo.LoginServlet</servlet-class>
+    </servlet>
     <!-- <servlet>
          <servlet-name>JDBCDemoServlet</servlet-name>
          <servlet-class>com.zhangchun.week4.JDBCDemoServlet</servlet-class>
@@ -101,6 +105,10 @@
     <servlet-mapping>
         <servlet-name>RegisterServlet</servlet-name>
         <url-pattern>/register</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>LoginServlet</servlet-name>
+        <url-pattern>/login</url-pattern>
     </servlet-mapping>
 
 
