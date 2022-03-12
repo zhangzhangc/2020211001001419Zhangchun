@@ -15,12 +15,13 @@ public class RegisterServlet extends HttpServlet {
 //    Statement stmt = null;
 //
 //    @Override
-//    public void init() throws ServletException {
-//        super.init();
-//        String driver = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
-//        String url = "jdbc:sqlserver://localhost:1433;database=userdb;encrypt=false";
-//        String username = "sa";
-//        String password = "123456";
+    public void init() throws ServletException {
+        super.init();
+        String driver = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
+        String url = "jdbc:sqlserver://localhost:1433;database=userdb;encrypt=false";
+        String username = "sa";
+        String password = "123456";
+    }
 //
 //
 //        try {
@@ -119,7 +120,8 @@ public class RegisterServlet extends HttpServlet {
         ResultSet rs=null;
         try{
             Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
-            conn =DriverManager.getConnection("jdbc:sqlserver://localhost:1433;database=userdb;encrypt=false","sa","123456");
+            conn =DriverManager.getConnection("jdbc:sqlserver://localhost:1433;database=userdb;encrypt=false",
+                    "sa","123456");
             stat = conn.prepareStatement("insert into usertable values"+"(?,?,?,?,?)");
             stat.setString(1, username);
             stat.setString(2,password);
