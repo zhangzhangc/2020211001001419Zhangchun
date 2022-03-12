@@ -1,4 +1,4 @@
-<%--
+<%@ page import="com.zhangchun.model.User" %><%--
   Created by IntelliJ IDEA.
   User: zc
   Date: 2022/3/5
@@ -42,7 +42,7 @@
 <%--        }--%>
 <%--    </style>--%>
 
-<form method="post" action="register">
+<%--<form method="post" action="register">
 <div class="info">
     <p>New User Registration</p>
 </div>
@@ -64,6 +64,20 @@
 </div>
 
     <div class="info"> <input  type="submit" value="Register"></div>
-    </form>
+    </form>--%>
+
+
+
+<form method="post"action="register" >
+    username<input type="text" name="username"><br>
+    password<input type="password" name="password"><br>
+    Email<input type="text" name="email"><br>
+    Gender:<input type="radio" name="gender" value="male">Male<input type="radio" name="gender" value="female">Female<br>
+    Date of Birth:<input type="text name" name="birthDate">(yyyy-mm-dd)<br>
+    <input type="submit" value="Register">
+
+
+
+</form>
 
 <%@include file="footer.jsp"%>
