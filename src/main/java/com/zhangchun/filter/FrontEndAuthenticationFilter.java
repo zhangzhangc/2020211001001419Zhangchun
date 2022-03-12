@@ -1,12 +1,11 @@
 package com.zhangchun.filter;
 
 import javax.servlet.*;
-import javax.servlet.annotation.WebFilter;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
-@WebFilter("/*")//all request
+//@WebFilter("/*")//all request
 public class FrontEndAuthenticationFilter implements Filter {
     private HttpServletRequest httpRequest=null;
     public static final String[] loginRequiredURLs={"/updateUser","/logout","/cart",
