@@ -68,7 +68,7 @@ public class UpdateUserServlet extends HttpServlet {
                 e.printStackTrace();
             }
             if (update == 0) {
-                request.getRequestDispatcher("WEB-INF/userInfo.jsp").forward(request, response);
+                request.getRequestDispatcher("accountDetails.jsp").forward(request, response);
             }
 
         } catch (ServletException | IOException e) {
